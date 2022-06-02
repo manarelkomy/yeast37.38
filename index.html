@@ -1,0 +1,30 @@
+<htmle>
+<head>
+    <title>instructor list</title>
+</head>
+<body>
+    <h3>instructor list</h3>
+    <a href="/instructor/add">Add</a>
+    <table>border="1>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>department</th>
+        </tr>
+{{range.instructors}}
+<tr>
+    <td>{{.Id}}</td>
+    <td>{{.Name}}</td>
+    <td>{{.Salary}}</td>
+    <td>{{.department}}</td>
+    <td>Edit | Delete</td>
+    <td>
+        Edit
+        <a href="/instructor/delete/{{.Id}}"onclick=return confirm("are you sure?")>Delete</a>
+    </td>
+</tr>
+
+    </table>
+</body>
+</htmle>    
